@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Launcher - El Launcher Definitivo para Android TV</title>
+    <meta name="description" content="Transforma tu Android TV con Noah Launcher. Acceso rápido a películas, series, streaming y apps. Interfaz elegante y búsqueda inteligente.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="8" fill="url(#gradient)"/>
+                            <path d="M12 28V12L28 20L12 28Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                                    <stop offset="0%" stop-color="#667eea"/>
+                                    <stop offset="100%" stop-color="#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>Noah Launcher</span>
+                    </div>
+                    <div class="nav-links">
+                        <a href="#features" data-i18n="nav_features">Características</a>
+                        <a href="#premium" data-i18n="nav_premium">Premium</a>
+                        <a href="#setup" data-i18n="nav_setup">Instalación</a>
+                        <a href="#download" class="btn-primary" data-i18n="nav_download">Descargar</a>
+                    </div>
+                    <div class="language-selector">
+                        <button class="lang-btn" id="langBtn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                            <span id="currentLang">ES</span>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <button class="lang-option active" data-lang="es" onclick="setLanguage('es')">🇪🇸 Español</button>
+                            <button class="lang-option" data-lang="en" onclick="setLanguage('en')">🇬🇧 English</button>
+                            <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
+                            <button class="lang-option" data-lang="de" onclick="setLanguage('de')">🇩🇪 Deutsch</button>
+                            <button class="lang-option" data-lang="pt" onclick="setLanguage('pt')">🇵🇹 Português</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h1 class="hero-title" data-i18n="hero_title">
+                    El Launcher <span class="gradient-text">Definitivo</span> para tu Android TV
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    Transforma tu experiencia de entretenimiento con una interfaz elegante, 
+                    con todos tus catalogos de Stremio disponibles para tí.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn-large btn-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                        </svg>
+                        <span data-i18n="hero_download">Descargar Gratis</span>
+                    </a>
+                    <a href="#demo" class="btn-large btn-secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="10 8 16 12 10 16 10 8"/>
+                        </svg>
+                        <span data-i18n="hero_demo">Ver Demo</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-suffix="€">1.99</div>
+                        <div class="stat-label" data-i18n="stat_price">Pago único</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-suffix="h">24</div>
+                        <div class="stat-label" data-i18n="stat_trial">Prueba gratis</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label" data-i18n="stat_languages">Idiomas</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Placeholder para captura de pantalla principal -->
+                <div class="screenshot-placeholder main-screenshot">
+                    <img src="images/1.webp" alt="Captura de pantalla principal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="features_title">Características Principales</h2>
+                <p class="section-subtitle" data-i18n="features_subtitle">Todo lo que necesitas para disfrutar de tu contenido favorito</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="feature1_title">Búsqueda Inteligente</h3>
+                    <p data-i18n="feature1_desc">Encuentra películas y series al instante. Busca por título, actor, director o género con búsqueda por voz.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="2" y="7" width="20" height="15" rx="2"/>
+                            <polyline points="17 2 12 7 7 2"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="feature2_title">Streaming Integrado</h3>
+                    <p data-i18n="feature2_desc">Acceso directo a los catálogos de Stremio de Netflix, HBO, Disney+, Prime Video, Apple TV+, Paramount+ y más desde un solo lugar.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="feature3_title">Catálogos Ilimitados</h3>
+                    <p data-i18n="feature3_desc">Explora todos los catálogos de contenido que tengas en tu cuenta de Stremio.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="feature4_title">Gestor de Apps</h3>
+                    <p data-i18n="feature4_desc">Organiza y accede a todas tus aplicaciones instaladas desde una vista en cuadrícula elegante.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                            <line x1="7" y1="7" x2="7.01" y2="7"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="feature5_title">Información Detallada</h3>
+                    <p data-i18n="feature5_desc">Calificaciones de IMDb y TMDb, trailers, reparto, directores y sinopsis completas.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="feature6_title">Configuración Rápida</h3>
+                    <p data-i18n="feature6_desc">Escanea un código QR desde tu móvil y configura todo en segundos. Sin complicaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="screenshots_title">Interfaz Elegante y Moderna</h2>
+                <p class="section-subtitle" data-i18n="screenshots_subtitle">Diseñada específicamente para la experiencia de TV</p>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <img src="images/1.webp" alt="Captura de pantalla principal">
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <div class="placeholder-content">
+                            <img src="images/2.webp" alt="Captura de pantalla principal">
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <div class="placeholder-content">
+                            <img src="images/3.webp" alt="Captura de pantalla principal">
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <div class="placeholder-content">
+                            <img src="images/4.webp" alt="Captura de pantalla principal">
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <div class="placeholder-content">
+                            <img src="images/5.webp" alt="Captura de pantalla principal">
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <div class="screenshot-placeholder">
+                        <div class="placeholder-content">
+                            <img src="images/6.webp" alt="Captura de pantalla principal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Section -->
+    <section id="premium" class="premium">
+        <div class="container">
+            <div class="premium-content">
+                <div class="premium-text">
+                    <div class="premium-badge" data-i18n="premium_badge">✨ Premium</div>
+                    <h2 class="premium-title" data-i18n="premium_title">Desbloquea Todo el Potencial</h2>
+                    <p class="premium-description" data-i18n="premium_desc">
+                        Obtén acceso completo a todas las funciones de Noah Launcher con un único pago. 
+                        Sin suscripciones, sin anuncios, sin límites.
+                    </p>
+
+                    <div class="premium-features">
+                        <div class="premium-feature">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="premium_feat1">Búsqueda ilimitada de películas y series</span>
+                        </div>
+                        <div class="premium-feature">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="premium_feat2">Acceso a todos los catálogos</span>
+                        </div>
+                        <div class="premium-feature">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="premium_feat3">Menú completo de plataformas de streaming</span>
+                        </div>
+                        <div class="premium-feature">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span data-i18n="premium_feat4">Sin anuncios ni limitaciones</span>
+                        </div>
+                    </div>
+
+                    <div class="premium-pricing">
+                        <div class="price">
+                            <span class="price-amount">1.99€</span>
+                            <span class="price-period" data-i18n="premium_price">Pago único</span>
+                        </div>
+                        <div class="trial-badge" data-i18n="premium_trial">
+                            🎁 Prueba gratis 24 horas
+                        </div>
+                    </div>
+
+                    <a href="#download" class="btn-large btn-primary" data-i18n="premium_cta">Probar Gratis</a>
+                </div>
+
+                <div class="premium-visual">
+                    <div class="screenshot-placeholder premium-screenshot">
+                        <div class="placeholder-content">
+                            <img src="images/1.webp" alt="Captura de pantalla principal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Section -->
+    <section id="setup" class="setup">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="setup_title">Configuración en 3 Pasos</h2>
+                <p class="section-subtitle" data-i18n="setup_subtitle">Empieza a disfrutar en menos de 2 minutos</p>
+            </div>
+
+            <div class="setup-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step1_title">Descarga e Instala</h3>
+                        <p data-i18n="step1_desc">Descarga Noah Launcher desde Google Play Store o instala el APK directamente en tu Android TV.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step2_title">Escanea el Código QR</h3>
+                        <p data-i18n="step2_desc">Abre la app y escanea el código QR con tu móvil. Introduce tus claves de TMDb y Stremio en la web.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step3_title">¡Listo para Disfrutar!</h3>
+                        <p data-i18n="step3_desc">La configuración se sincroniza automáticamente y puedes empezar a explorar tu contenido favorito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="faq_title">Preguntas Frecuentes</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 data-i18n="faq1_q">¿Es compatible con mi dispositivo?</h3>
+                    <p data-i18n="faq1_a">Noah Launcher funciona en cualquier dispositivo Android TV con Android 8.0 o superior. También es compatible con dispositivos móviles Android.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 data-i18n="faq2_q">¿Necesito pagar suscripción?</h3>
+                    <p data-i18n="faq2_a">No. Noah Premium es un pago único de 1.99€. Sin suscripciones mensuales. Además, puedes probarlo gratis durante 24 horas.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 data-i18n="faq3_q">¿Qué claves necesito?</h3>
+                    <p data-i18n="faq3_a">Necesitas una clave de API de TMDb (gratuita) para información de películas y series, y una cuenta de Stremio.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 data-i18n="faq4_q">¿Puedo usar mi cuenta en varios dispositivos?</h3>
+                    <p data-i18n="faq4_a">Sí. Tu compra premium está vinculada a tu cuenta de Google Play, por lo que puedes usarla en todos tus dispositivos Android.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 data-i18n="faq5_q">¿Cómo funciona el launcher?</h3>
+                    <p data-i18n="faq5_a">Noah Launcher puede reemplazar tu pantalla de inicio. Al pulsar el botón HOME de tu control, se abrirá Noah en lugar del launcher predeterminado.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 data-i18n="faq6_q">¿Es seguro?</h3>
+                    <p data-i18n="faq6_a">Totalmente. No recopilamos, guardamos ni compartimos datos personales. El código es transparente y solo accede a lo necesario para funcionar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="download-title" data-i18n="download_title">Descarga Noah Launcher</h2>
+                <p class="download-subtitle" data-i18n="download_subtitle">Disponible para Android TV y dispositivos móviles</p>
+
+                <div class="download-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.sl.noah" target="_blank" rel="noopener noreferrer" class="download-btn google-play">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                        </svg>
+                        <div>
+                            <span class="btn-label" data-i18n="download_playstore">Disponible en</span>
+                            <span class="btn-store">Google Play</span>
+                        </div>
+                    </a>
+
+                    <a href="noah_1_0_48.apk" class="download-btn apk">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        <div>
+                            <span class="btn-label" data-i18n="download_apk_label">Descargar</span>
+                            <span class="btn-store" data-i18n="download_apk_store">APK Directo</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="8" fill="url(#gradient2)"/>
+                            <path d="M12 28V12L28 20L12 28Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0" y1="0" x2="40" y2="40">
+                                    <stop offset="0%" stop-color="#667eea"/>
+                                    <stop offset="100%" stop-color="#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>Noah Launcher</span>
+                    </div>
+                    <p data-i18n="footer_tagline">El launcher definitivo para Android TV</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-i18n="footer_product">Producto</h4>
+                        <a href="#features" data-i18n="nav_features">Características</a>
+                        <a href="#premium" data-i18n="nav_premium">Premium</a>
+                        <a href="#download" data-i18n="nav_download">Descargar</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 data-i18n="footer_support">Soporte</h4>
+                        <a href="#setup" data-i18n="nav_setup">Instalación</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Noah Launcher. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
